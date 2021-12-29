@@ -12,10 +12,13 @@ class Navbar extends React.Component {
 					<div className="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 							<li className="nav-item">
-								<a className="nav-link text-white" aria-current="page" href="https://activite-paranormale.blogspot.com/"><i className="fas fa-chevron-right"></i> Blog</a>
+								<a className="nav-link text-white" aria-current="page" href="//activite-paranormale.blogspot.com/"><i className="fas fa-chevron-right"></i> Blog</a>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link text-white" href="https://forum-fr.activite-paranormale.com/"><i className="fas fa-chevron-right"></i> Forum de discussion</a>
+								<a className="nav-link text-white" href="//forum-fr.activite-paranormale.com/"><i className="fas fa-chevron-right"></i> Forum de discussion</a>
+							</li>
+							<li className="nav-item">
+								<a className="nav-link text-white" href="//classifiedads.activite-paranormale.com/"><i className="fas fa-chevron-right"></i> Petites annonces</a>
 							</li>
 						</ul>
 						<form className="d-flex">
