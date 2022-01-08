@@ -21,10 +21,10 @@ class ProductSearch extends React.Component {
 
 	render() {
 		return (
-			<form class="d-flex" onSubmit={this.handleSubmit}>
-				<div class="input-group">
-					<input class="form-control" type="search" placeholder="Rechercher" aria-label="Search" value={this.state.value} />
-					<button class="btn btn-secondary" type="submit"><i class="fas fa-search"></i></button>
+			<form className="d-flex" onSubmit={this.handleSubmit}>
+				<div className="input-group">
+					<input className="form-control" type="search" placeholder="Rechercher" aria-label="Search" value={this.state.value} />
+					<button className="btn btn-secondary" type="submit"><i className="fas fa-search"></i></button>
 				</div>
 			</form>
 		);
