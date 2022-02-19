@@ -67,6 +67,9 @@ this.customStyles = {
            contentLabel="Détails du livre"
         >
 		<h4>{this.props.item.title}</h4>
+		{ (this.props.item.book.subtitle != null && this.props.item.book.subtitle != "") &&
+			<p><i>{this.props.item.book.subtitle}</i></p>
+		}
 		<hr></hr>
 		<div className="row">
 			<div className="col-sm-4">{Parser(this.props.image)}</div>
@@ -88,10 +91,20 @@ this.customStyles = {
 				{ (this.props.item.book.publicationDate != null && this.props.item.book.publicationDate != "") &&
 					<p className="mb-0"><b>Publié le : </b>{this.formatDate(this.props.item.book.publicationDate)}</p>
 				}
+				
+				{ (this.props.item.book.hasOwnProperty('publisher') && this.props.item.book.publisher.hasOwnProperty('title') && this.props.item.book.publisher.title != null && this.props.item.book.publisher.title != "") &&
+					<p className="mb-0"><b>Éditeur : </b>{this.props.item.book.publisher.title}</p>
+				}
 				<a href={this.props.url} className="btn btn-sm amazon text-white mt-2"><i className="fab fa-alipay"></i> Achetez-le sur Amazon</a>
 			</div>
 		</div>
 		<hr></hr>
+		{ (this.props.item.book.book.text != null && this.props.item.book.book.text != "") &&
+			<div className="row">
+				<h5>Résumé</h5>
+				<div>{Parser(this.props.item.book.book.text)}</div>
+			</div>
+		}
 		<div className="row">
 			<h5>Auteurs</h5>
 			{this.props.item.book.book.authors.map((author, index) => (
