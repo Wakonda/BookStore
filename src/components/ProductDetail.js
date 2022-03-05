@@ -47,7 +47,7 @@ this.customStyles = {
 		if(date == null)
 			return null;
 
-		return new Date(date).toISOString().slice(0, 10).split("-").reverse().join("/");
+		return date.slice(0, 10).split("-").reverse().join("/");
 	}
 	
 	formatDateAuthor(date) {

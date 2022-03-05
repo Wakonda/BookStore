@@ -147,6 +147,7 @@ class Products extends React.Component {
 
 	render() {
 		const { error, isLoaded, items } = this.state;
+		
 
 		if (error) {
 			return <div>Erreur : {error.message}</div>;
