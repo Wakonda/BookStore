@@ -71,7 +71,7 @@ this.customStyles = {
 			<p><i>{this.props.item.book.subtitle}</i></p>
 		}
 		<hr></hr>
-		<div className="row">
+		<div className="row" id="container_abstract_content">
 			<div className="col-sm-4">{Parser(this.props.image)}</div>
 			<div className="col-sm-8">
 				{Parser(this.props.text)}
@@ -102,7 +102,7 @@ this.customStyles = {
 		{ (this.props.item.book.book.text != null && this.props.item.book.book.text != "") &&
 			<div className="row">
 				<h5>Résumé</h5>
-				<div>{Parser(this.props.item.book.book.text)}</div>
+				<div className="text-justify">{Parser(this.props.item.book.book.text)}</div>
 			</div>
 		}
 		<div className="row">

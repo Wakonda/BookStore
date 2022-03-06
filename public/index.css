@@ -81,3 +81,12 @@ p.price span {
 .load-spinner {
 	color: goldenrod;
 }
+.text-justify {
+	text-align: justify;
+}
+
+@media (max-width: 576px) {
+	#container_abstract_content {
+		text-align: center;
+	}
+}
