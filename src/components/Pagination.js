@@ -12,6 +12,7 @@ class Pagination extends React.Component {
 		  breakClassName={'break-me'}
 		  pageCount={this.props.pageCount}
 		  marginPagesDisplayed={2}
+		  forcePage={this.props.forcePage}
 		  pageRangeDisplayed={this.props.totalPostsByPage}
 		  containerClassName={'pagination justify-content-center'}
 		  subContainerClassName={'pages pagination'}

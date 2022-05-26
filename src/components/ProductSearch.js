@@ -5,6 +5,7 @@ class ProductSearch extends React.Component {
 		super(props);
 		this.state = {value: ''};
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleChange = this.handleChange.bind(this);
 	}
 
 
@@ -23,7 +24,7 @@ class ProductSearch extends React.Component {
 		return (
 			<form className="d-flex" onSubmit={this.handleSubmit}>
 				<div className="input-group">
-					<input className="form-control" type="search" placeholder="Rechercher" aria-label="Search" value={this.state.value} />
+					<input className="form-control" type="search" placeholder="Rechercher" aria-label="Search" value={this.state.value} onChange={this.handleChange} />
 					<button className="btn btn-secondary" type="submit"><i className="fas fa-search"></i></button>
 				</div>
 			</form>

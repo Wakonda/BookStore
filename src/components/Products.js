@@ -43,6 +43,8 @@ class Products extends React.Component {
   
 	handlePageClick (data) {
 		data = data.selected + 1;
+		
+		//setCurrentPage(data)
 
 		this.setState({currentPage: data}, function () {
 			this.getDatas();
@@ -68,6 +70,10 @@ class Products extends React.Component {
 			textSearch = "&book.book.authors.title=" + this.state.authorSearch;
 
 		const url = process.env.REACT_APP_URL + "api/book_stores?page=" + this.state.currentPage + "&order[id]=desc" + textSearch + "&book.book.language.abbreviation=fr";
+		
+		this.setState({
+			isLoaded: false
+		});
 
 		fetch(url)
 		.then(res => res.json())
@@ -147,7 +153,6 @@ class Products extends React.Component {
 
 	render() {
 		const { error, isLoaded, items } = this.state;
-		
 
 		if (error) {
 			return <div>Erreur : {error.message}</div>;
@@ -204,7 +209,6 @@ class Products extends React.Component {
 
 				<Pagination 
 					pageCount={this.state.pageCount}
-					initialPage={this.state.currentPage - 1}
 					forcePage={this.state.currentPage - 1}
 					previousLabel={'<'}
 					nextLabel={'>'}
