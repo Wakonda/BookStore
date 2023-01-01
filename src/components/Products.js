@@ -61,7 +61,7 @@ class Products extends React.Component {
 		var textSearch = "";
 
 		if (this.props.searchValue !== "")
-			textSearch = "&orsearch=" + this.props.searchValue;
+			textSearch = "&or_search=" + this.props.searchValue;
 		
 		if (typeof this.state.themeSearch !== "undefined" && this.state.themeSearch !== null)
 			textSearch = "&book.book.theme.title=" + this.state.themeSearch;
